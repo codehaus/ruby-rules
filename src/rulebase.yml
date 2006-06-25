@@ -21,13 +21,12 @@ ruleset:
   then: reject application
 
 #ok an idea: how to add convenience methods/wrappers to facts?
-#so rules can read more and more plain
+#so rules can read more and more plain english
 #how to store these mappings? in code? in yaml?
 
 vocabulary:
   fact: Driver
-  -map: is_crazy = driver.age < 21 and driver.priors > 3
-  -field: age, priors, name
-
+  -map: is_crazy = self.age < 21 and self.priors > 3 #hmm... how will I do this...
+  -field: age, priors, name #not sure if I will do this.
 
 #what about more traditional deftemplate type things?
