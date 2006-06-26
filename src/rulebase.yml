@@ -25,8 +25,13 @@ ruleset:
 #how to store these mappings? in code? in yaml?
 
 vocabulary:
-  fact: Driver
-  -map: is_crazy = self.age < 21 and self.priors > 3 #hmm... how will I do this...
-  -field: age, priors, name #not sure if I will do this.
+  -fact: Driver
+    map: #gets stuck on the Driver class proxy
+    - is_crazy = age < 21 and priors > 3
+    - is_happy = age > 90
+    fields:
+    - age
+    - priors
+    - name #not sure if I will do this - this is to protect the fact class.
 
 #what about more traditional deftemplate type things?
