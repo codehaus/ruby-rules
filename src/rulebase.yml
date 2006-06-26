@@ -26,12 +26,11 @@ ruleset:
 
 vocabulary:
   -fact: Driver
+    fields: age, priors, name #the presense of this means that the fact will use
+    #these fields to work out outs class, rather then the class
     map: #gets stuck on the Driver class proxy
     - is_crazy = age < 21 and priors > 3
     - is_happy = age > 90
-    fields:
-    - age
-    - priors
-    - name #not sure if I will do this - this is to protect the fact class.
+
 
 #what about more traditional deftemplate type things?

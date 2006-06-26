@@ -1,4 +1,6 @@
 
+
+
 #contains a combination of facts to suit a rule (only the "head"/type is checked, no the actual conditions).
 class Tuple
     attr_accessor :facts
