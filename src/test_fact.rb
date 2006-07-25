@@ -1,4 +1,4 @@
-
+require 'test/unit'
 
 #this is for test purposes - pretend this is the real class
 class Driver
